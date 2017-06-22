@@ -1,12 +1,12 @@
 FROM php:7.0.4-apache
 
-MAINTAINER Pablo Morales <pablofmorales@gmail.com>
+MAINTAINER Team Marmite <marmite@endouble.com>
 
 RUN apt-get -y update
 # essentials
 RUN apt-get install -y git zip wget g++
 # nice-to-have
-RUN apt-get install -y vim silversearcher-ag
+RUN apt-get install -y vim silversearcher-ag zsh
 
 RUN docker-php-ext-install -j$(nproc) mysqli pdo pdo_mysql mbstring bcmath
 

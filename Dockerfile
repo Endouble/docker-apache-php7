@@ -20,6 +20,7 @@ RUN apt-get install -y pkg-config libsasl2-dev
 RUN apt-get install -y libicu-dev
 RUN pecl install intl
 RUN docker-php-ext-install intl
+RUN docker-php-ext-install zip
 
 RUN pecl install mongodb
 

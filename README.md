@@ -1,15 +1,16 @@
 # docker-apache-php7
 To build the image you can run:
 
-    docker build -t pablofmorales/apache-php7 .
+    docker build -t endouble/taf-apache-php7 .
 
 If you're rebuilding an existing image you need to remove it first: 
 
     docker rmi -f <uuid>
 
-and stop it if it's currently running:
+and stop all containers using it:
 
-    docker rm <uuid>
+    docker ps # find containers using the image
+    docker rm <uuid> # remove them one-by-one
 
 To get the `uuid` for the image:
 
@@ -18,3 +19,18 @@ To get the `uuid` for the image:
 To get the `uuid` of a container:
 
     docker ps -a
+
+To tag a newly-build-image:
+
+    docker tag endouble/taf-apache-php7 endouble/taf-apache-php7:<tag_version>
+
+E.g.:
+
+    docker tag endouble/taf-apache-php7 endouble/taf-apache-php7:0.0.1
+
+To push to docker hub (assuming you have access):
+
+
+    docker push endouble/taf-apache-php7
+
+You can see if image was successfully pushed at: https://hub.docker.com/r/endouble/taf-apache-php7/

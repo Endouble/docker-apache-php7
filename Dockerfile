@@ -18,9 +18,9 @@ RUN apt-get install -y openssl libssl-dev libcurl4-openssl-dev
 RUN apt-get install -y pkg-config libsasl2-dev
 
 RUN apt-get install -y libicu-dev
-RUN pecl install intl
 RUN docker-php-ext-install intl
 RUN docker-php-ext-install zip
+RUN docker-php-ext-configure intl
 
 RUN pecl install mongodb
 

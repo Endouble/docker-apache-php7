@@ -50,5 +50,7 @@ EXPOSE 80
 ENV APP_ENV=dev
 ENV TERM=xterm
 
+RUN rm -f /etc/apache2/sites-enabled/000-default.conf
+
 RUN service apache2 restart
 

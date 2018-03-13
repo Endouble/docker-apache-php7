@@ -1,4 +1,7 @@
 # docker-apache-php7
+
+*This repo is now deprecated in favour of [tap_docker_images](https://github.com/Endouble/tap_docker_images)*
+
 To build the image you can run:
 
     docker build -t endouble/taf-apache-php7 .
